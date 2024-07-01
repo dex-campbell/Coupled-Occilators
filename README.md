@@ -1,24 +1,33 @@
 # Coupled-Occilators
 
-# QR Factorization and Eigenvalue Computation
+## QR Factorization and Eigenvalue Computation
 
-This project implements the QR factorization algorithm to compute the eigenvalues of a square matrix. The program is written in C and provides an interactive console-based interface for users to input the matrix size, matrix values, and the number of iterations for the QR algorithm.
+This repository contains two C programs for calculations of values for a coupled Occilator focusing on matrix operations, specifically QR factorization and eigenvalue calculations.
 
-## Features
+## Files
 
-- **QR Factorization**: Decomposes a given matrix \( A \) into an orthogonal matrix \( Q \) and an upper triangular matrix \( R \).
-- **Eigenvalue Computation**: Uses the QR algorithm to iteratively update the matrix \( A \) and compute its eigenvalues.
-- **Matrix Printing**: Functions to print matrices in a readable format.
+- **QR Factorization**
+- **Eigenvalue Computation**
 
-## Getting Started
+## File Description
+### QR_Factorisation
+- This program performs QR factorization of a square matrix. QR factorization decomposes a matrix into an orthogonal matrix (Q) and an upper triangular matrix (R).
 
-### Prerequisites
+#### KeyFunctions
+- print_matrix(int n, double** matrix): Prints the matrix of size n x n.
+- qr_factorization(int n, double** A, double** Q, double** R): Performs QR factorization on matrix A and stores the results in matrices Q and R.
 
-- A C compiler (e.g., `gcc`).
+### Eigenvalue_Calculation
+- This program calculates the eigenvalues of a square matrix and uses them to determine the oscillation frequencies for different mass values.
 
-### Compilation
+#### Key Functions
+- print_matrix(int n, double** matrix): Prints the matrix of size n x n.
+- qr_factorization(int n, double** A, double** Q, double** R): Performs QR factorization on matrix A and stores the results in matrices Q and R.
+- main(): Main function to drive the program. Reads input for matrix size, number of different masses, and calculates eigenvalues and oscillation frequencies.
 
-To compile the program, run the following command in your terminal:
+## Dependencies
+- Both programs require the math library for mathematical functions. Ensure you link the math library during compilation using the -lm flag.
 
-```sh
-gcc -o qr_factorization Comp_Phys_CW_1.c -lm
+## Usage
+- These programs are designed for educational purposes to demonstrate matrix operations in computational physics. The QR factorization program decomposes a matrix into orthogonal and upper triangular matrices, while the eigenvalue calculation program finds the eigenvalues and corresponding oscillation frequencies for different mass values.
+
